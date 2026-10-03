@@ -53,6 +53,153 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--mut);font-siz
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:20;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%;border-radius:8px}
 .note{font-size:13px;color:var(--mut);margin-top:14px}
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
+
+@media (max-width: 700px) {
+
+  /* Main page spacing */
+  .w {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    padding: 38px 0;
+  }
+
+  /* Navigation */
+  nav .w {
+    height: auto;
+    min-height: 54px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    gap: 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav b {
+    font-size: 16px;
+    flex: 0 0 auto;
+  }
+
+  nav a {
+    font-size: 13px;
+    flex: 0 0 auto;
+  }
+
+  /* Games / Brick-Out container */
+  .play {
+    display: block;
+    padding: 16px;
+  }
+
+  .play > div:first-child {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Brick-Out buttons */
+  #playBtn,
+  #playBtn + .btn {
+    display: flex;
+    width: 100%;
+    min-height: 50px;
+    margin: 0 0 10px 0 !important;
+    padding: 11px 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 15px !important;
+  }
+
+  /* Game frame */
+  .frame {
+    width: 100%;
+    max-width: 100%;
+    margin: 18px auto 0;
+    aspect-ratio: 1 / 1.1;
+  }
+
+  /* General cards */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-width: 0;
+  }
+
+  /* Wide cards */
+  .wide {
+    flex-direction: column;
+  }
+
+  .wide img {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Header */
+  header {
+    padding: 48px 0 38px;
+  }
+
+  /* Main header buttons */
+  header .btns {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  header .btns .btn {
+    text-align: center;
+  }
+
+  /* Stats */
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Prevent long text from pushing page width */
+  p,
+  li,
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
+}
+
+
+/* Extra-small phones */
+@media (max-width: 420px) {
+
+  .w {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .play {
+    padding: 12px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  #playBtn,
+  #playBtn + .btn {
+    font-size: 14px !important;
+  }
+
+  .strip img {
+    height: 280px;
+  }
+}
 </style>
 </head>
 <body>
