@@ -58,6 +58,7 @@ if(game.state == GameState.START){
   updateBricks();
   updateFragments();
   updateEffects(delta);
+  updateAutoLaser();
   //checkCollisions();
   
 }
@@ -88,6 +89,15 @@ function updateLogo(){
 
 }
 
+
+function updateAutoLaser(){
+    if (game.state !== GameState.PLAYING || !(game.effects.laser > 0)) return;
+    const now = performance.now();
+    if (now - game.lastLaserShot >= 500){
+        game.lastLaserShot = now;
+        shootLaser();
+    }
+}
 
 function updateLasers(){
 

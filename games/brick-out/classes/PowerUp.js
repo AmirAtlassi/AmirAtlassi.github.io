@@ -238,7 +238,7 @@ class PowerUp{
 
 
             game.effects.laser = 6;
-            game.lastLaserShot = 0;
+            game.lastLaserShot = performance.now() - 500;
             break;
 
         case "multi":

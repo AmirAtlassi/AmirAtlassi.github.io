@@ -1,10 +1,23 @@
+let activePointerId = null;
+let activeTouchId = null;
+
 function createEvents(){
-  canvas.addEventListener("mousemove",moveMouse);
+  if (window.PointerEvent){
+    canvas.addEventListener("pointerdown", pointerDown);
+    canvas.addEventListener("pointermove", pointerMove);
+    canvas.addEventListener("pointerup", pointerEnd);
+    canvas.addEventListener("pointercancel", pointerEnd);
+    canvas.addEventListener("lostpointercapture", pointerEnd);
+  } else {
+    canvas.addEventListener("mousemove", moveMouse);
+    canvas.addEventListener("touchstart", touchStart, {passive:false});
+    canvas.addEventListener("touchmove", touchMove, {passive:false});
+    canvas.addEventListener("touchend", touchEnd);
+    canvas.addEventListener("touchcancel", touchEnd);
+  }
   window.addEventListener("keydown", keyDown);
   window.addEventListener("mousedown",mouseDown);
   window.addEventListener("keydown", highScoreKeyDown);
-  canvas.addEventListener("touchstart", touchStart, {passive:false});
-  canvas.addEventListener("touchmove", touchMove, {passive:false});
   document.addEventListener("visibilitychange", function(){ if(document.hidden && game.state === GameState.PLAYING) game.state = GameState.PAUSED; });
   
 }
@@ -47,20 +60,7 @@ function keyDown(event){
             break;
         
         case GameState.PLAYING:
-           if(game.effects.laser > 0){
-
-                const now = performance.now();
-
-                if(now - game.lastLaserShot > 500){
-
-                    game.lastLaserShot = now;
-                    shootLaser();
-
-                }
-
-            }
-
-
+            // Lasers fire automatically in the game update loop.
             break;
         
     }
@@ -85,7 +85,6 @@ function shootLaser(){
 
     const leftX  = game.paddle.x + 13;
     const rightX = game.paddle.x + game.paddle.w - 13;
-    console.log(leftX+" "+rightX);
 
     const startY = game.paddle.y - 18;
 
@@ -159,20 +158,54 @@ function fitCanvas(){
     canvas.style.height = Math.floor(canvas.height * scale) + "px";
 }
 
+function pointerDown(event){
+    if (event.pointerType === "mouse") return;
+    if (activePointerId !== null || event.isPrimary === false) return;
+    event.preventDefault();
+    activePointerId = event.pointerId;
+    canvas.setPointerCapture(event.pointerId);
+    startTouchAt(event.clientX);
+}
+
+function pointerMove(event){
+    if (event.pointerType === "mouse"){
+        if (activePointerId === null) moveMouse(event);
+        return;
+    }
+    if (event.pointerId !== activePointerId) return;
+    event.preventDefault();
+    moveMouse(event);
+}
+
+function pointerEnd(event){
+    if (event.pointerId !== activePointerId) return;
+    activePointerId = null;
+    if (canvas.hasPointerCapture(event.pointerId))
+        canvas.releasePointerCapture(event.pointerId);
+}
+
 function touchMove(event){
     event.preventDefault();
-    if (game.state !== GameState.PLAYING && game.state !== GameState.READY) return;
-    game.paddle.move(canvasX(event.touches[0].clientX));
-    if (game.state === GameState.READY){
-        game.balls[0].x = game.paddle.x + game.paddle.w / 2;
-        game.balls[0].y = game.paddle.y - game.balls[0].r;
-    }
+    const touch = Array.from(event.touches).find(t => t.identifier === activeTouchId);
+    if (touch) moveMouse(touch);
 }
 
 function touchStart(event){
     event.preventDefault();
-    const x = canvasX(event.touches[0].clientX);
+    if (activeTouchId !== null || !event.changedTouches.length) return;
+    const touch = event.changedTouches[0];
+    activeTouchId = touch.identifier;
+    startTouchAt(touch.clientX);
+}
 
+function touchEnd(event){
+    if (Array.from(event.changedTouches).some(t => t.identifier === activeTouchId))
+        activeTouchId = null;
+}
+
+function startTouchAt(clientX){
+    // Position the paddle (and attached ball in READY) before launching.
+    moveMouse({clientX});
     switch (game.state){
         case GameState.START:
         case GameState.READY:
@@ -193,14 +226,6 @@ function touchStart(event){
             break;
         }
         case GameState.PLAYING:
-            game.paddle.move(x);
-            if (game.effects.laser > 0){
-                const now = performance.now();
-                if (now - game.lastLaserShot > 500){
-                    game.lastLaserShot = now;
-                    shootLaser();
-                }
-            }
             break;
     }
 }
