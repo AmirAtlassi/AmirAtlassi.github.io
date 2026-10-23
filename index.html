@@ -14,16 +14,207 @@
 <meta property="og:description" content="20 years in EPC and petrochemical projects. Excel VBA and Python automation, games and engineering tools.">
 <meta property="og:image" content="https://amiratlassi.github.io/assets/doc-status-poster.jpg">
 <meta name="description" content="Project coordinator and expeditor with 20 years in construction and petrochemical EPC. Builds Excel VBA and Python automation for document control and procurement, plus games and engineering tools.">
+<<<<<<< HEAD
 <link rel="stylesheet" href="assets/css/site.css?v=final-play-only-1">
+=======
+<style>
+:root{
+  --bg:#f5f7fb;--card:#fff;--ink:#14213d;--mut:#5b6784;--line:#e3e8f2;
+  --blue:#2563eb;--orange:#f97316;--purple:#7c3aed;--green:#059669;--pink:#e11d74;--teal:#0891b2;
+  --navy:#0f1b3d;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--blue);text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 22px}
+
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .w{display:flex;gap:20px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav b{margin-right:auto;font-size:17px;letter-spacing:.2px}
+nav a{color:var(--mut);font-size:14px;font-weight:500}nav a:hover{color:var(--blue)}
+
+header{background:linear-gradient(120deg,#0f1b3d 0%,#1e2a78 48%,#5b21b6 100%);color:#fff;position:relative;overflow:hidden}
+header:before,header:after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55}
+header:before{width:380px;height:380px;background:#06b6d4;right:-80px;top:-120px}
+header:after{width:320px;height:320px;background:#f97316;right:22%;bottom:-200px;opacity:.35}
+header .w{position:relative;z-index:1;padding-top:72px;padding-bottom:56px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;margin:0 0 10px;letter-spacing:-.5px}
+h1 span{background:linear-gradient(90deg,#67e8f9,#f9a8d4,#fdba74);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(17px,2.4vw,22px);color:#cbd5f5;margin:0 0 18px;font-weight:500}
+.lead{max-width:690px;color:#e2e8ff;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 8px}
+.btn{display:inline-block;padding:11px 20px;border-radius:10px;border:1.5px solid var(--blue);color:var(--blue);font-weight:600;background:#fff;cursor:pointer;font-size:15px;font-family:inherit}
+.btn:hover{background:#eef3ff}
+.btn.p{background:linear-gradient(90deg,#f97316,#ec4899);color:#fff;border:0}
+.btn.p:hover{filter:brightness(1.07);background:linear-gradient(90deg,#f97316,#ec4899)}
+header .btn:not(.p){background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+header .btn:not(.p):hover{background:rgba(255,255,255,.12)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:30px}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:24px;line-height:1.2}.stat span{font-size:13px;color:#cbd5f5}
+.stat:nth-child(1) b{color:#67e8f9}.stat:nth-child(2) b{color:#fdba74}.stat:nth-child(3) b{color:#86efac}.stat:nth-child(4) b{color:#f9a8d4}
+
+section{padding:60px 0}
+section:nth-of-type(even){background:#fff}
+.kick{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--c,var(--blue))}
+.kick:before{content:"";width:10px;height:10px;border-radius:3px;background:var(--c,var(--blue))}
+h2{font-size:30px;line-height:1.2;margin:6px 0 8px}
+h2+p{color:var(--mut);margin:0 0 28px;max-width:740px}
+h3.sub{margin:44px 0 16px;font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+.card{--c:var(--blue);background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 10px rgba(20,33,61,.05);transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,33,61,.10)}
+.card img,.card video{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;cursor:zoom-in;display:block;border-bottom:1px solid var(--line);background:#eef1f7}
+.card img.xl{object-fit:contain;background:#fff;aspect-ratio:2/1}
+.wide>img.xl{aspect-ratio:auto}
+.pic{position:relative;width:55%;flex:none;overflow:hidden;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line)}
+.pic:before{content:"";position:absolute;inset:-24px;background:var(--bg) center/cover;filter:blur(20px) saturate(1.1)}
+.card .pic img{position:relative;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border:0;background:none}
+.card video{cursor:default;background:#000;object-fit:contain}
+.card .t{padding:16px 18px 18px}.card h3{margin:0 0 6px;font-size:19px}.card p{margin:0;color:var(--mut);font-size:15px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.tags i{font-style:normal;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;background:color-mix(in srgb,var(--c) 12%,#fff);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 28%,#fff)}
+.wide{grid-column:1/-1;flex-direction:row}
+.wide>img,.wide>video{width:55%;aspect-ratio:auto;border:0;border-right:1px solid var(--line);flex:none}
+.wide .t{display:flex;flex-direction:column;justify-content:center;padding:22px 26px}
+.wide.rev{flex-direction:row-reverse}.wide.rev>img{border-right:0;border-left:1px solid var(--line)}
+@media(max-width:760px){.wide,.wide.rev{flex-direction:column}.wide>img,.wide>video,.pic{width:100%;border:0;border-bottom:1px solid var(--line)}}
+.c-blue{--c:var(--blue)}.c-orange{--c:var(--orange)}.c-purple{--c:var(--purple)}.c-green{--c:var(--green)}.c-pink{--c:var(--pink)}.c-teal{--c:var(--teal)}
+ul.pts{margin:12px 0 0;padding-left:18px;color:var(--mut);font-size:15px}ul.pts li{margin:3px 0}
+
+.timeline{border-left:3px solid var(--line);margin-left:6px}
+.job{padding:0 0 24px 24px;position:relative}.job:before{content:"";position:absolute;left:-10px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--c,var(--blue));border:3px solid #fff;box-shadow:0 0 0 2px var(--c,var(--blue))}
+.job h3{margin:0;font-size:19px}.job small{color:var(--mut);font-size:14px}.job ul{margin:8px 0 0;padding-left:18px;color:#34425f}
+.note{font-size:13.5px;color:var(--mut);margin-top:16px}
+
+.route{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;margin:14px 0 4px}
+.route span{font-size:13px;font-weight:700;padding:4px 11px;border-radius:20px;color:#fff}
+.route em{font-style:normal;color:#9aa5c0}
+.strip{display:flex;gap:14px;overflow-x:auto;padding:6px 0 14px;scroll-snap-type:x proximity}
+.strip img{height:420px;width:auto;flex:none;border-radius:14px;border:1px solid var(--line);cursor:zoom-in;scroll-snap-align:start;box-shadow:0 4px 14px rgba(20,33,61,.12)}
+@media(max-width:600px){.strip img{height:330px}}
+
+.play{background:linear-gradient(135deg,#0f1b3d,#231a5a);color:#fff;border-radius:16px;padding:24px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;border-top:4px solid var(--pink)}
+@media(max-width:780px){.play{grid-template-columns:1fr}}
+.play h3{margin:0 0 8px;font-size:24px}.play p{color:#cbd5f5;margin:0 0 12px}
+.play .tags i{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.25)}
+.brick-actions{display:flex;flex-wrap:wrap;gap:12px}
+.brick-actions .btn{display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.4;min-height:44px;max-width:100%;white-space:normal}
+.brick-actions a.btn{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.play>div{min-width:0}
+@media(max-width:780px){.brick-actions{flex-direction:column}.brick-actions .btn{width:100%}}
+.play .note{color:#a9b6dc}
+.frame{width:min(100%,440px);aspect-ratio:1/1.1;border:2px solid #4fd8ff;border-radius:12px;box-shadow:0 0 24px rgba(79,216,255,.35);overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;margin:0 auto}
+.frame iframe{width:100%;height:100%;border:0}
+
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:20px}
+.box{--c:var(--blue);background:var(--card);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:14px;padding:18px 20px}
+.box h3{margin:0 0 12px;font-size:17px;color:var(--c)}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chips span{padding:4px 12px;border-radius:20px;font-size:13.5px;font-weight:500;background:color-mix(in srgb,var(--c) 11%,#fff);color:#26324f;border:1px solid color-mix(in srgb,var(--c) 26%,#fff)}
+.box ul{margin:0;padding-left:18px;color:#34425f}
+
+footer{padding:34px 0;background:var(--navy);color:#a9b6dc;font-size:14px;text-align:center}
+#lb{position:fixed;inset:0;background:rgba(10,16,35,.9);display:none;align-items:center;justify-content:center;z-index:30;padding:16px;cursor:zoom-out}
+#lb img{max-width:100%;max-height:100%;border-radius:10px;background:#fff}
+
+/* Bespoke industrial / code / game silhouette. No external dependencies. */
+:root{--bg:#f2f5f8;--ink:#172b3b;--mut:#526579;--line:#dfe7ed;--blue:#167a91;--orange:#d86b29;--purple:#7354b5;--navy:#081622}
+body{background:var(--bg)}
+nav{background:rgba(8,22,34,.96);border-color:#203748;color:#ecf4fa}
+nav a{color:#bdceda}nav a:hover{color:#73e1d7}nav b{letter-spacing:.6px}
+nav a:focus-visible,.btn:focus-visible,[data-zoom]:focus-visible{outline:3px solid #22c9b6;outline-offset:5px}
+header{isolation:isolate;background:radial-gradient(ellipse at 84% 55%,#15434a 0,transparent 45%),linear-gradient(125deg,#081622,#10293b 65%,#14313d)}
+header:before{width:620px;height:620px;background:#167e83;right:-260px;top:40px;opacity:.13;filter:blur(90px)}
+header:after{display:none}
+header .w{padding-top:76px;padding-bottom:310px}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;color:#9acccf;font-size:11px;font-weight:700;letter-spacing:2.6px;margin:0 0 20px;text-transform:uppercase}
+.hero-eyebrow:before{content:"";width:24px;height:2px;background:#64d7c8}
+h1{font-size:clamp(38px,6.2vw,66px);letter-spacing:-2px;line-height:1.13}
+h1 span{background:linear-gradient(100deg,#b5f2e8,#6cdbce 60%,#8ccdda);background-clip:text;-webkit-background-clip:text}
+.role{color:#bfd3e0;font-size:clamp(16px,2vw,20px);max-width:760px}
+.lead{color:#b7cbd9;max-width:710px;line-height:1.85}
+.btn{border-radius:7px;transition:background .2s,transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:#c45c22;color:white;box-shadow:0 6px 22px #0002}
+.btn.p:hover{background:#ac4c18;filter:none}
+header .btn.p{background:#f4b178;color:#102633}header .btn.p:hover{background:#ffc492}
+header .btn:not(.p){border-color:#678696;color:#e1eff5}
+.stats{gap:0;border:1px solid #38505f;border-radius:10px;overflow:hidden;background:rgba(10,27,40,.55);max-width:870px;margin-top:36px}
+.stat{background:none;border:0;border-right:1px solid #38505f;border-radius:0;padding:18px 20px}.stat:last-child{border-right:0}
+.stat b{font-size:23px}.stat span{color:#b9cedd}.stat:nth-child(1) b{color:#85e1d2}.stat:nth-child(2) b{color:#f4b178}.stat:nth-child(3) b{color:#a4d8e4}.stat:nth-child(4) b{color:#c2b5e9}
+.hero-scene{position:absolute;left:0;bottom:0;width:100%;height:295px;z-index:-1;pointer-events:none}
+.hero-scene svg{display:block;width:100%;height:100%;overflow:visible}
+.scene-caption{position:absolute;bottom:20px;left:0;right:0;display:flex;justify-content:space-between;gap:10px;padding:0 max(22px,calc((100% - 1036px)/2));color:#8caeba;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;pointer-events:none}
+.scene-signal{stroke-dasharray:5 15;animation:signal-flow 8s linear infinite}.scene-spark{animation:signal-glow 4s ease-in-out infinite}.scene-bird{animation:bird-float 7s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes signal-flow{to{stroke-dashoffset:-160}}@keyframes signal-glow{50%{opacity:.35}}@keyframes bird-float{50%{transform:translateY(-7px)}}
+section{padding:72px 0}section:nth-of-type(even){background:#fff}
+h2{letter-spacing:-.7px}.kick{font-size:11px;letter-spacing:2px}
+.card{border-top-width:3px;border-radius:12px;box-shadow:0 4px 22px #172b3b06}.card:hover{box-shadow:0 12px 30px #172b3b10}
+.box{border-top-width:3px;border-radius:12px}.play{background:linear-gradient(125deg,#0b2232,#173644);border-top-color:#68d3c5}
+footer{background:#081622;border-top:1px solid #213c4a}
+@media(min-width:761px){.stats{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:760px){header .w{padding-top:48px;padding-bottom:230px}.hero-scene{height:205px}.hero-eyebrow{font-size:9px;letter-spacing:1.5px}h1{letter-spacing:-1.2px}.stats{grid-template-columns:1fr 1fr}.stat{padding:15px}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #38505f}.stat b{font-size:21px}.scene-caption{font-size:8px;letter-spacing:1px;bottom:14px}section{padding:50px 0}nav .w{gap:17px}nav b{font-size:15px}.grid{grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+</style>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 </head>
 <body id="top">
 <a class="skip-link" href="#main-content">Skip to content</a>
 <nav aria-label="Main navigation"><div class="w"><a class="brand" href="#top" aria-label="Amir Atlassi — back to top">Amir Atlassi</a><a href="#featured">Work</a><a href="#experience">Experience</a><a href="#automation">Automation</a><a href="#games">Games</a><a href="#tools">Tools</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
 
+<<<<<<< HEAD
 <header data-world="industry">
 
 <div class="bird-airspace" aria-hidden="true" inert><button class="flying-bird" type="button" aria-label="Surprise Atlas Bird"><img src="assets/bird/bird_normal.png" width="500" height="400" alt="" draggable="false"></button></div>
 
+=======
+<header>
+<div class="hero-scene" aria-hidden="true">
+<svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <linearGradient id="scene-haze" x2="0" y2="1"><stop stop-color="#65b9b3" stop-opacity="0"/><stop offset="1" stop-color="#65b9b3" stop-opacity=".09"/></linearGradient>
+ <linearGradient id="scene-wire"><stop stop-color="#e7a16c"/><stop offset=".5" stop-color="#63c9c0"/><stop offset="1" stop-color="#a99ad5"/></linearGradient>
+ <pattern id="scene-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#96c7cf" stroke-opacity=".055"/></pattern>
+ <pattern id="scene-windows" width="14" height="17" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="3" height="5" fill="#ddac78" opacity=".55"/></pattern>
+</defs>
+<path fill="url(#scene-haze)" d="M0 0H1440V300H0z"/><path fill="url(#scene-grid)" d="M0 0H1440V300H0z"/>
+<!-- Distant refinery and mountains -->
+<g fill="#1b3946"><path d="M0 242V178H28V142H47V178H72V202H98V164H116V202H156V118H171V202H216V160H229V218H281V185H300V218H354V138H368V218H405V173H427V233H490V253H0z"/><path d="M963 259l92-89 54 44 81-112 94 103 66-62 90 100v40z"/></g>
+<g fill="none" stroke="#43616a" stroke-width="1" opacity=".45"><path d="M1109 214l38-14 43-98 30 96 64 7M1147 200l43 30 30-32M1284 205l22-13 44-49"/></g>
+<!-- Petrochemical silhouette: tanks, columns, pipe bridges and flare -->
+<g fill="#081a27" stroke="#35515c" stroke-width="1.2">
+ <path d="M0 271v-60q38-27 76 0v60zm7-60h62M83 271v-39h103v39M91 232v-14q43-25 86 0v14"/>
+ <path d="M201 273V108q0-12 10-12t10 12v165M196 126h30M196 157h30M196 188h30M196 219h30M198 251h27"/>
+ <path d="M247 273V61h23v212M241 88h35M241 126h35M241 164h35M241 202h35M241 240h35"/>
+ <path d="M300 273V150h33v123M296 171h41M296 204h41M296 237h41"/>
+ <path d="M378 273V37h7v236M365 273l17-214 18 214M373 177h19M369 216h27"/>
+ <path d="M417 273v-62h57v62M430 211v-22h27v22M487 273v-88h32v88"/>
+ <path d="M139 273V166h12v107M134 166h22"/>
+</g>
+<g fill="none" stroke="#52717a" stroke-width="2"><path d="M20 251h120v-56h58M224 230h22M271 212h28M334 250h82M270 101h15v151h92M400 244h110v-35h40"/><path d="M174 273V187h184v86M174 196h184M184 197l24 76m6-76 24 76m6-76 24 76m6-76 24 76m6-76 24 76" stroke-width="1" opacity=".55"/></g>
+<g stroke="#72949b" stroke-width="1" opacity=".7"><path d="M255 67v197m8-197v197m-8-181h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8m-8 15h8"/></g>
+<path class="scene-spark" d="M382 39c-16-12 7-18 1-31 18 13 8 24-1 31" fill="#f2a56c"/><path d="M382 35c-5-6 3-9 2-15 6 7 3 12-2 15" fill="#ffe2a9"/>
+<g fill="#eab17b"><circle cx="211" cy="103" r="2"/><circle cx="258" cy="59" r="2"/><circle cx="145" cy="163" r="2"/></g>
+<!-- Pipes become circuit traces -->
+<g fill="none" stroke="url(#scene-wire)" stroke-width="1.5" opacity=".65"><path d="M465 249h90l35-35h91l38-38h166l32 32h86l33-33h89M494 263h102l30-30h90l39-38h108l31 32h125l29-30h121M520 278h105l25-25h91l34-34h73l29 29h180l29-29h74"/></g>
+<path class="scene-signal" d="M465 249h90l35-35h91l38-38h166l32 32h86l33-33h89" fill="none" stroke="#b4ece0" stroke-width="2"/>
+<g fill="#8ed5cd"><circle cx="465" cy="249" r="3"/><circle cx="741" cy="253" r="3"/><circle cx="1125" cy="175" r="3"/><circle cx="1150" cy="219" r="3"/></g>
+<!-- Minimal code window -->
+<g transform="translate(618 58)"><rect width="228" height="103" rx="7" fill="#0a1e2c" stroke="#426773"/><path d="M0 22h228" stroke="#34505d"/><g fill="#6c939c"><circle cx="12" cy="11" r="2.5"/><circle cx="23" cy="11" r="2.5"/><circle cx="34" cy="11" r="2.5"/></g><g fill="none" stroke="#7ed4c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M41 43L26 56l15 13m43-26 15 13-15 13m-25 9 9-43"/><path d="M122 43h61m-61 13h79m-79 13h43m-43 13h62" stroke="#6d919d"/></g><path d="M106 103v17h38v-17m-58 18h78" fill="none" stroke="#426773"/></g>
+<!-- Game landscape: platforms, pickups, pixel bird and character -->
+<g fill="#0a1b2a" stroke="#507b81" stroke-width="1.2"><path d="M1031 250v-18h93v18zm111-40v-17h87v17zm139-46v-17h96v17z"/><path d="M1200 273v-22h76v-42h50v-28h53v-28h61v120z"/></g>
+<g stroke="#7ac7ba" stroke-width="2"><path d="M1031 232h93m18-39h87m52-46h96"/></g>
+<g fill="#ddb77e" class="scene-spark"><path d="M1062 201l5-8 5 8-5 8zm111-42 5-8 5 8-5 8zm128-44 5-8 5 8-5 8z"/></g>
+<g transform="translate(1180 161)" fill="#9ac8c8"><path d="M0 0h12v12H0zm-3 13h18v13h-5v6H5v-6h-8z"/><path d="M8 3h3v3H8" fill="#0b2635"/></g>
+<g class="scene-bird" transform="translate(971 109)" fill="#83d9ca"><path d="M0 8h8V0h8v8h8v8h8v8H8v-8H0z"/><path d="M24 12h9v5h-9" fill="#edb17f"/><path d="M18 10h3v3h-3" fill="#081a27"/></g>
+<g fill="#87aeb7" opacity=".45"><path d="M907 76h3v3h-3zm137-39h3v3h-3zm80 64h3v3h-3zm229-53h3v3h-3zm-370 90h3v3h-3z"/></g>
+<path d="M0 275H1440V300H0z" fill="#081622"/><path d="M0 275H1440" stroke="#385963" stroke-opacity=".65"/>
+</svg>
+</div>
+<div class="scene-caption" aria-hidden="true"><span>01 / Petrochemical</span><span>02 / Automation</span><span>03 / Game development</span></div>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 <div class="w">
 <p class="hero-eyebrow">Engineering experience. Creative code.</p>
 <h1>Hi, I'm <span>Amir Atlassi</span></h1>
@@ -108,6 +299,7 @@
 <h2>Games I build for fun</h2>
 <p>A mobile game in Godot, a browser game in plain JavaScript, and a collection of games that run inside Excel, because a spreadsheet can be a lot more than a spreadsheet.</p><div class="section-art section-art-games"><img class="section-scene" src="assets/art/play.webp" srcset="assets/art/play-small.webp 900w, assets/art/play.webp 1920w" sizes="(max-width:760px) 100vw, 1080px" width="1920" height="640" alt="" loading="lazy" decoding="async"><div class="section-art-caption"><strong>Worlds beyond the worksheet.</strong><span>Built with curiosity. Made to be explored.</span></div></div>
 
+<<<<<<< HEAD
 
 <div class="grid">
 <div class="card c-purple wide atlas-showcase" id="atlas-bird">
@@ -121,17 +313,45 @@
 <p>A single letter sets an extraordinary journey in motion. Follow a determined messenger through sweeping landscapes, unfamiliar skies and changing weather. Beyond every horizon lies another world to discover—and another stretch of the journey that stands between the message and its destination.</p>
 <div class="tags">
 <i>2D adventure</i><i>Android</i><i>Built with Godot</i>
+=======
+<h3 class="sub" style="margin-top:0">Atlas Bird · mobile game (Godot)</h3>
+<div class="grid">
+<div class="card c-purple wide">
+<div class="pic" style="--bg:url(assets/atlas-bird.webp)">
+<img src="assets/atlas-bird.webp" alt="Atlas Bird featured artwork" data-zoom>
+</div>
+<div class="t">
+<h3>Atlas Bird</h3>
+<p>A little messenger bird has one job: deliver a letter from Iran to Canada. Along the way it flies across Turkey, Ukraine, the Baltic region, Sweden, Norway and Greenland, and every stop is a new world of landscapes, weather and surprises.</p>
+<div class="route">
+<span style="background:#ef4444">Iran</span><em>→</em>
+<span style="background:#f97316">Turkey</span><em>→</em>
+<span style="background:#ca8a04">Ukraine</span><em>→</em>
+<span style="background:#059669">Baltics</span><em>→</em>
+<span style="background:#0891b2">Sweden</span><em>→</em>
+<span style="background:#2563eb">Norway</span><em>→</em>
+<span style="background:#7c3aed">Greenland</span><em>→</em>
+<span style="background:#e11d74">Canada</span>
+</div>
+<div class="tags">
+<i>Godot</i><i>Android</i><i>2D adventure</i><i>Available on Google Play</i>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 </div>
 <p style="margin-top:16px">
 <a class="btn p"
    href="https://play.google.com/store/apps/details?id=com.atlasgame.atlasbird"
    target="_blank"
+<<<<<<< HEAD
    rel="noopener noreferrer">Get Atlas Bird on Google Play ↗</a>
+=======
+   rel="noopener noreferrer">▶ Download on Google Play</a>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 </p>
 </div>
 </div>
 </div>
 
+<<<<<<< HEAD
 <div class="gallery-heading"><h3>A glimpse of the journey</h3><span>Scroll to explore <span aria-hidden="true">→</span></span></div>
 <div class="strip atlas-gallery" style="margin-top:18px" tabindex="0" role="region" aria-label="Atlas Bird screenshots; scroll horizontally to see more">
 <img src="assets/godot-viking.webp" alt="Atlas Bird: Viking village" data-zoom width="480" height="1200" loading="lazy" decoding="async">
@@ -139,6 +359,14 @@
 <img src="assets/godot-sauna.webp" alt="Atlas Bird: sauna scene" data-zoom width="560" height="1400" loading="lazy" decoding="async">
 <img src="assets/godot-arctic.webp" alt="Atlas Bird: Arctic sunset" data-zoom width="560" height="1400" loading="lazy" decoding="async">
 <img src="assets/greenland.webp" alt="Atlas Bird: Greenland stage 7 artwork" data-zoom width="480" height="1200" loading="lazy" decoding="async">
+=======
+<div class="strip" style="margin-top:18px">
+<img src="assets/godot-viking.webp" alt="Atlas Bird: Viking village" data-zoom>
+<img src="assets/godot-flight.webp" alt="Atlas Bird: flying over a river" data-zoom>
+<img src="assets/godot-sauna.webp" alt="Atlas Bird: sauna scene" data-zoom>
+<img src="assets/godot-arctic.webp" alt="Atlas Bird: Arctic sunset" data-zoom>
+<img src="assets/greenland.webp" alt="Atlas Bird: Greenland stage 7 artwork" data-zoom>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 </div>
 
 <h3 class="sub">Brick-Out · playable right here</h3>
@@ -198,6 +426,22 @@
 </main>
 <footer>© 2026 Amir Atlassi</footer>
 <div id="lb" role="dialog" aria-modal="true" aria-label="Image preview" tabindex="-1"><button id="lbClose" type="button" aria-label="Close image preview" style="position:absolute;right:20px;top:15px;color:white;background:#183342;border:1px solid #78949e;border-radius:6px;font-size:24px;cursor:pointer;padding:2px 12px">×</button><img alt=""></div>
+<<<<<<< HEAD
 <script src="assets/js/site.js?v=final-play-only-1" defer></script>
+=======
+<script>
+var lb=document.getElementById('lb'),li=lb.querySelector('img'),previousFocus;
+function closePreview(){lb.style.display='none';document.body.style.overflow='';if(previousFocus)previousFocus.focus()}
+document.querySelectorAll('[data-zoom]').forEach(function(i){
+ i.tabIndex=0;i.setAttribute('role','button');i.setAttribute('aria-label','Enlarge: '+i.alt);
+ function openPreview(){previousFocus=document.activeElement;li.src=i.dataset.full||i.src;li.alt=i.alt;lb.style.display='flex';document.body.style.overflow='hidden';document.getElementById('lbClose').focus()}
+ i.onclick=openPreview;i.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openPreview()}};
+});
+lb.onclick=closePreview;
+lb.onkeydown=function(e){if(e.key==='Escape')closePreview();if(e.key==='Tab'){e.preventDefault();document.getElementById('lbClose').focus()}};
+
+document.getElementById('playBtn').onclick=function(){document.getElementById('frame').innerHTML='<iframe src="games/brick-out/index.html" title="Brick-Out" allow="autoplay"></iframe>'};
+</script>
+>>>>>>> 852c8868b241d1b3e4cd7bd0344baf2460938ae3
 </body>
 </html>
