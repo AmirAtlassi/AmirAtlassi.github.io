@@ -357,3 +357,10 @@ header .bird-airspace{bottom:99px;left:max(22px,calc((100% - 1036px)/2));right:m
 header:not([data-world="play"]) .bird-airspace{opacity:0;visibility:hidden;pointer-events:none}
 header:not([data-world="play"]) .flying-bird{pointer-events:none}
 header[data-world="play"] .bird-airspace{opacity:1;visibility:visible}
+/* Bespoke game environments. */
+#atlas-bird.atlas-showcase{background:linear-gradient(90deg,#071d2c66,#071d2ce8),url('../art/atlas-environment.webp') center/cover;border-color:#649b9b}
+#atlas-bird.atlas-showcase .pic{background:transparent}
+#games .play{background:linear-gradient(90deg,#071325ed,#07132577),url('../art/brick-environment.webp') center/cover;border:1px solid #7766bb;border-top:3px solid #f1ab75;padding:36px;box-shadow:0 18px 48px #101d3830}
+#games .play .frame{background:linear-gradient(#06112755,#06112799),url('../art/brick-environment.webp') 75% center/cover;border-color:#8fe5f5;box-shadow:0 0 32px #54bffb30}
+#games .frame>span{background:#071526df;padding:14px 22px;border:1px solid #90dced66;border-radius:30px;color:#edfaff!important}
+@media(max-width:780px){#games .play{padding:22px;background-position:65% center}#atlas-bird.atlas-showcase{background-position:35% center}}
